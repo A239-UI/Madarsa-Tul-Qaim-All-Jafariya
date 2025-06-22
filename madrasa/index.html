@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Madarsa All Qaim Jafariya</title>
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    header {
+
+      margin: 0;
+      background-color: #007BFF;
+      color: white;
+      padding: 200px 100px;
+      text-align: center;
+      background-image: url(madrasa.jpg);
+
+
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 15px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: yellow;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section.form-section {
+      background-color: #f1f5f9;
+      padding: 30px 20px;
+      margin: 40px 10%;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    }
+
+    section.form-section h2,
+    section.form-section h3 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="file"] {
+      padding: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      max-width: 600px;
+      margin: auto;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .hero {
+      background-color: #e0f2ff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #333;
+    }
+
+
+    footer {
+      text-align: center;
+      background-color: #007BFF;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+
+    /* Staff Section Styles */
+    #staff {
+      background-color: #f1f5f9;
+      padding: 30px 20px;
+      margin: 40px 10%;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    }
+
+    #staff h2,
+    #staff h3 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    #staff table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    #staff table th,
+    #staff table td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    #staff table thead {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    #staff table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    #staff form {
+      max-width: 600px;
+      margin: 30px auto 0;
+    }
+
+    #staff label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    #staff input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    #staff button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #staff button:hover {
+      background-color: #ddd;
+      border: dashed;
+      color: #0056b3;
+
+    }
+
+    #requirements ul {
+      max-width: 600px;
+      margin: auto;
+      padding-left: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    #requirements ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    section {
+      scroll-margin-top: 100px;
+      /* adjust value if needed */
+    }
+
+    #requirements ul {
+      max-width: 600px;
+      margin: auto;
+      padding-left: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    #requirements ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: transparent;
+      border-radius: 50%;
+      padding: 10px;
+      /* box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); */
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.8);
+      /* box-shadow: 0 0 15px rgba(0, 123, 255, 0.8); */
+      background: transparent;
+      rotate: 25deg;
+      transition: 3s;
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+
+    }
+
+    .location-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      background-color: white;
+      border-radius: 50%;
+      padding: 10px;
+      background-color: transparent;
+      /* box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .location-float:hover {
+      transform: scale(1.8);
+      /* box-shadow: 0 0 15px rgba(0, 123, 255, 0.8); */
+      background-color: transparent;
+      rotate: 50deg;
+      transition: 3s;
+
+    }
+
+
+    .location-float img {
+      width: 32px;
+      height: 32px;
+    }
+
+    img {
+      width: 100px;
+    }
+
+    .contact-card {
+      position: relative;
+      width: 300px;
+      background: #007bff;
+      border-radius: 20px;
+      padding: 30px 20px 20px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+    }
+
+    p {
+      color: #333;
+    }
+
+
+
+    .profile-pic {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      border: 5px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+      background: white;
+      z-index: 1;
+
+    }
+
+    .contact-card:hover .profile-pic {
+      top: -70px;
+      rotate: 10deg;
+      transition: 2s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 20);
+
+    }
+
+    .name {
+      font-weight: bold;
+      margin-top: 60px;
+      font-size: 20px;
+    }
+
+
+    .number {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* 2 columns */
+      gap: 10px;
+      /* space between photos */
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Madarsa Tul Qaim All Jafariya</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#course">Course</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#admissionForm">Admission Form</a></li>
+
+
+      </ul>
+    </nav>
+
+
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Welcome to Madarsa Tul Qaim All Jafariya</h2>
+    <p>Providing quality Islamic education with dedication and sincerity.</p>
+  </section>
+
+
+  <section id="contact" class="form-section">
+    <div>
+      <br>
+
+
+
+      <div>
+
+        <br>
+        <h3>Contact Information</h3>
+        <!-- Contact Section -->
+        <section id="contact" class="form-section" style="padding: 40px 20px; background: #f9f9f9; text-align: center;">
+          <div>
+            <h3 style="font-size: 28px; margin-bottom: 30px;">
+
+              <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+                <!-- First Contact Card -->
+                <div class="contact-card"
+                  style="background: #007BFF; padding: 20px; border-radius: 1t5px; width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.9);">
+                  <div class="profile-pic" style="margin-bottom: 15px; ">
+                    <img src="WhatsApp Image 2025-05-18 at 16.41.36_03306f75.jpg" alt="Molana Sabir Abbas Toheedi"
+                      style="width: 100%; height: auto; border-radius: 10px;">
+                  </div>
+                  <div class="name" style="font-weight: bold; font-size: 18px;">Molana Sabir Abbas Toheedi <br><strong
+                      style="font-weight: normal; color: white;">Principal</strong></div>
+                  <div class="number" style="ma rgin-top: 10px; color: white;">📞 0301 7696578</div>
+                </div>
+              </div>
+              <p>Assalam-o-Alaikum I am Maulana Sabir Abbas Toheedi, the principal of the Madarsa. I strive to provide
+                your children with not only religious education but also worldly knowledge in an environment that feels
+                just like home. My goal is to create a nurturing atmosphere where children can take the first step
+                towards a bright future — one that leads them to become devoted followers of Imam Zamana (A.S) </p>
+          </div>
+        </section>
+        <section id="staff" class="form-section">
+          <h2>Our Staff</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Institute</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Molana Sabir Abbas Toheedi</strong></td>
+                <td><strong>Principal</strong></td>
+                <td><strong>Madarsa Tul Qaim All Jafariya</strong></td>
+              </tr>
+              <tr>
+                <td>Agha Saqlain</td>
+                <td>Teacher</td>
+                <td>Madarsa Tul Qaim All Jafariya</td>
+              </tr>
+              <tr>
+                <td>Sir Danish</td>
+                <td>Teacher</td>
+                <td>School</td>
+              </tr>
+              <tr>
+                <td>Ghulam Rasool</td>
+                <td>Safeer</td>
+                <td>Madarsa Tul Qaim All Jafariya</td>
+              </tr>
+              <tr>
+                <td>Ali Minhal</td>
+                <td>Computer Oprater</td>
+                <td>Madarsa Tul Qaim All Jafariya</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Add New Staff</h3>
+          <form action="SUBMIT.HTML">
+            <label for="name">Name</label>
+            <input type="text" id="staffName" name="staffName" required />
+
+            <label for="staffPosition">Education</label>
+            <input type="text" id="staffPosition" name="staffPosition" required />
+
+            <label for="staffInstitute">Number</label>
+            <input type="number" id="staffInstitute" name="staffInstitute" required />
+            <button type="submit">Add Staff</button>
+          </form>
+
+          </form>
+
+
+          <section id="course" class="form-section">
+            <h2>Our Courses</h2>
+            <p style="text-align:center;">We offer a variety of Islamic and modern education courses including:</p>
+            <ul>
+              <li>Qur'an with Tajweed</li>
+              <li>Fiqh (Islamic Jurisprudence)</li>
+              <li>Aqaid (Beliefs)</li>
+              <li>Nave </li>
+              <li>Sarf </li>
+              <li>Hidaya</li>
+              <!DOCTYPE html>
+              <html>
+
+              <head>
+
+              </head>
+
+              <body>
+
+                <div class="photo-gallery">
+                  <img src="WhatsApp Image 2025-05-19 at 13.28.31_1e45bb14.jpg" alt="Photo 1"
+                    style="width: 100%; height: 100%; border-radius: 10px;">
+                  <img src="WhatsApp Image 2025-05-19 at 13.32.58_0422428f.jpg" alt="Photo 2"
+                    style="width: 100%; height: 100%; border-radius: 10px;">
+                  <img src="WhatsApp Image 2025-05-19 at 13.33.14_26e75417.jpg" alt="Photo 3"
+                    style="width: 100%; height: 100%; border-radius: 10px;">
+                  <video src="WhatsApp Video 2025-05-20 at 09.12.08_c985ef28.mp4" alt="Video 4" controls autoplay muted
+                    style="width: 100%; height: 100%; border-radius: 10px;">
+                </div>
+
+              </body>
+
+              </html>
+
+              <!-- Requirements Section -->
+              <section class="form-section" id="requirements">
+                <h2>Admission Requirements</h2>
+                <ul>
+                  <li>2 Recent Passport Size Photographs</li>
+                  <li>Copy of Student's B-Form</li>
+                  <li>Copy of Father's CNIC</li>
+                  <li>Previous Academic Certificates (if any)</li>
+                  <li>Medical Certificate (if required)</li>
+                  <li>Complete Admission Form</li>
+                  <li>Father Name/Guardian's Contact Number</li>
+                  <li>Student Must Appear for Interview</li>
+                </ul>
+
+              </section>
+              <section id="admissionForm" class="form-section">
+                <h2>Admission Form</h2>
+                <form action="SUBMIT.HTML">
+                  <label for="studentName">Student Name</label>
+                  <input type="text" id="studentName" name="studentName" required />
+
+                  <label for="studentClass">Class</label>
+                  <input type="text" id="studentClass" name="studentClass" required />
+
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" id="dob" name="dob" required />
+
+                  <label for="guardianName">Father Name/Guardian Name</label>
+                  <input type="text" id="guardianName" name="guardianName" required />
+
+                  <button type="submit">Submit Admission</button>
+                </form>
+              </section>
+              <footer>
+                <p>&copy; 2025 Madarsa Tul Qaim All Jafariya. All rights reserved.</p>
+                <p>Designed with dedication for Islamic education.</p>
+              </footer>
+              <a href="https://wa.me/923017696578" class="whatsapp-float" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" />
+              </a>
+
+
+              <a href="https://maps.app.goo.gl/BiFqV7Jhji5Q7DpL8" class="location-float" target="_blank"
+                title="View Location">
+                <img src="https://img.icons8.com/color/48/place-marker--v1.png" alt="Location" />
+              </a>
+
+
+</body>
+
+</html>
